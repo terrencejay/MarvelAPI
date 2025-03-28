@@ -1,0 +1,44 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Characters</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/md5/2.3.0/md5.min.js"></script>
+    <script src="marvel.js"></script>
+    <style>
+        .character-card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            max-width: 300px;
+            display: inline-block;
+        }
+        
+        .character-card img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        #characters-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .loading {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="characters-container">
+        <div class="loading">Loading characters...</div>
+    </div>
+    
+</body>
+</html>
