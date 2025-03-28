@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timer Application</title>
+</head>
+<body>
+    <!-- Countdown Timer -->
+    <section>
+        <h2>Countdown Timer</h2>
+        <form onsubmit="handleTimerSubmit(event)">
+            <input type="number" id="duration" placeholder="Enter seconds" required>
+            <button type="submit">Start Timer</button>
+        </form>
+        <div id="timer"></div>
+    </section>
+
+    <!-- Delayed Notification -->
+    <section>
+        <h2>Delayed Notification</h2>
+        <form onsubmit="handleNotificationSubmit(event)">
+            <input type="number" id="delay" placeholder="Delay (ms)" required>
+            <input type="text" id="message" placeholder="Notification message" required>
+            <button type="submit">Schedule Notification</button>
+        </form>
+        <div id="notification" style="display: none;"></div>
+    </section>
+
+    <!-- Repeating Notification -->
+    <section>
+        <h2>Repeating Notification</h2>
+        <form onsubmit="handleRepeatingNotificationSubmit(event)">
+            <input type="number" id="interval" placeholder="Interval (ms)" required>
+            <input type="text" id="repeat-message" placeholder="Notification message" required>
+            <button type="submit">Start Repeating</button>
+        </form>
+        <button onclick="stopRepeatingNotification()">Stop Repeating</button>
+        <div id="repeating-notification" style="display: none;"></div>
+    </section>
+
+    <script src="timer.js"></script>
+</body>
+</html>
